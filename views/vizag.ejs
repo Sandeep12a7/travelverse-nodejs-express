@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        background-image: url('');
+        background-size: cover;
+        background-color: lightskyblue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       }
+#p1{
+    position: absolute;
+    left: 50px;
+    top:-50px;
+    font-size: 60px;
+    font-style: italic;
+   }
+   #apimg{
+    height:200px;
+    width: 380px;
+    position: absolute;
+    top: 38px;
+    left:35px;
+    bottom:120px;
+   }
+   #i1{
+    background-color: beige;
+    height: 280px;
+    width: 450px;
+    position: absolute;
+    left:500px;
+    bottom:180px;
+    margin: 60px;
+    border-radius: 20px;
+   }
+   #i2{
+    background-color: beige;
+    height: 340px;
+    width: 950px;
+    padding: 40px;
+    position: absolute;
+    left:200px;
+    bottom:-260px;
+    border-radius: 30px;
+    margin: 50px;
+   }
+   body{
+    height: 1500px;
+   }
+   #i3{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:240px;
+    border-radius: 30px;
+   }
+   #i4{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:800px;
+    border-radius: 30px;
+   }
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 137%;
+    overflow: fixed;
+
+    
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    </style>
+</head>
+<body>
+    <form action="/vizag" method="get">
+    <p id="p1">Visakhapatnam</p>
+         <hr style="border-color:black;position:relative;top: 70px;">
+         <div id="i1">
+            <img id="apimg" src="https://images.unsplash.com/photo-1609854534028-b512f5246abc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmlzYWtoYXBhdG5hbXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80">
+        </div>
+        <br><br><br><br><br>
+        <div id="i2">
+            <h2><strong><center>INFORMATION</center></strong></h2>
+            <hr style="width: 950px;height: 1.5px;background-color: black;"><br>
+            <p> This 'jewel of the east coast' is located on the southeast coast of the Indian peninsula. Also referred to as Vizag, its scenic beaches and stunning landscape make Vizag one of the most popular tourist places in Andhra Pradesh. Visitors have a lot of activities to do in Vizag, whether it is taking part in water sports or just relaxing on beaches. <br>
+
+                Best Time to Visit- October – March  <br>
+                Ideal Vacation Duration- 2 – 3 days  <br>
+                Average Vacation Cost: ₹ 20,000 - 21,000 for 7 days <br>
+                Places to Visit- Kailasagiri, Rushikonda Beach, Vuda Park, Ramanaidu Film Studios, Dolphin Nose Point Lighthouse <br>
+                Things to Do- Explore marine life at Matsyadarshini Aquarium, spend time on the tranquil beaches, taste the delectable cuisine of Vishakhapatnam and take part in parasailing or scuba diving. <br>
+                Visakhapatnam also known as Vizag, Viśākha or Waltair,is the largest and most populous metropolitian city in the Indian state of Andhra Pradesh. It is between the Eastern Ghats and the coast of the Bay of Bengal.It is the second-largest city on the east coast of India after Chennai, and the fourth-largest in South India.</p>
+            
+        </div>
+        <div id="i3">
+            <center><h2>WEATHER</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;">
+            <div class="icon">
+            <h1><%=temp%>°C</h1><img src="/day/default.png" alt="" srcset="" id="image">
+            </div>
+            <h1 class="climate"><%=climate%></h1>
+                <h2>Humidity : <%=humidity%>%<br><br>Wind Speed : <%=windspeed%>kmph</h2>
+        </div>
+        <div id="i4">
+            <center><h2>TRANSPORTATION</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;"><br>
+            <p> <img src="https://img.icons8.com/?size=1x&id=oOAYqE64W2MO&format=png" height="25px" width="25px" alt="">&nbsp;&nbsp; By Air- The nearest airport is Vishakhapatnam Airport which connects the city with important places within/outside India.
+               
+                <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=d8MqKVWJkyqN&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp;  By Train- The nearest railway station is the Vishakhapatnam Junction connecting to all important cities.<br><br>
+                <img src="https://img.icons8.com/?size=1x&id=f42OOoV1ACzO&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp;  By Road- Well-maintained roads connect Vishakhapatnam with major Indian cities like Kolkata.</p>
+        </div>
+    </form>
+    <script>
+        
+        let image=document.getElementById("image");
+
+        let climate=document.querySelector(".climate").textContent;
+        if(climate=="Mist"){
+            image.src="/day/Mist.png"
+        }
+        if(climate=="Patchy rain possible"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate rain"){
+            image.src="/day/Moderate.png"
+        }
+        if(climate=="Light rain shower"){
+            image.src="/day/patchy.png"
+        }
+        if(climate=="Partly cloudy"){
+            image.src="/day/default.png"
+        }
+        if(climate=="Cloudy"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Overcast"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Sunny"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Clear"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Thundery outbreaks possible"){
+            image.src="/day/Thunderstorm.png"
+        }
+        if(climate=="Fog"){
+            image.src="/day/Fog.png"
+        }
+        if(climate=="Light rain"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate or heavy rain shower"){
+            image.src="/day/Heavy.png"
+        }
+        if(climate=="Light drizzle"){
+            image.src="/day/Drizzle.png"
+        }
+    
+</script>
+</body>
+</html>

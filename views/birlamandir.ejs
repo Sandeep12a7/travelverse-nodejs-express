@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        background-image: url('');
+        background-size: cover;
+        background-color: lightskyblue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       }
+#p1{
+    position: absolute;
+    left: 50px;
+    top:-50px;
+    font-size: 60px;
+    font-style: italic;
+   }
+   #apimg{
+    height:200px;
+    width: 380px;
+    position: absolute;
+    top: 38px;
+    left:35px;
+    bottom:120px;
+   }
+   #i1{
+    background-color: beige;
+    height: 280px;
+    width: 450px;
+    position: absolute;
+    left:500px;
+    bottom:180px;
+    margin: 60px;
+    border-radius: 20px;
+   }
+   #i2{
+    background-color: beige;
+    height: 340px;
+    width: 950px;
+    padding: 40px;
+    position: absolute;
+    left:200px;
+    bottom:-260px;
+    border-radius: 30px;
+    margin: 50px;
+   }
+   body{
+    height: 1500px;
+   }
+   #i3{
+    background-color:beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:240px;
+    border-radius: 30px;
+   }
+   #i4{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:800px;
+    border-radius: 30px;
+   }
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 137%;
+    overflow: fixed;
+
+    
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    </style>
+</head>
+<body>
+    <form action="/birlamandir" method="get">
+    
+    <div id="nav">
+        <form action="/search" method="get">
+          <p id="p1">Birla Mandir</p>
+         </form>
+         <hr style="border-color:black;position:relative;top: 70px;">
+         <div id="i1">
+            <img id="apimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Birla_Mandir_in_Hyderabad%2C_2015.JPG/1920px-Birla_Mandir_in_Hyderabad%2C_2015.JPG">
+        </div>
+        <br><br><br><br><br>
+        <div id="i2">
+            <h2><strong><center>INFORMATION</center></strong></h2>
+            <hr style="width: 950px;height: 1.5px;background-color: black;"><br>
+            <p>
+
+                Name: Birla Mandir <br>
+                
+                Location: Birla Mandir is located in various cities across India, including Delhi, Kolkata, Jaipur, Hyderabad, and more. <br>
+                
+                Overview: Birla Mandir is a grand Hindu temple dedicated to Lord Vishnu and Goddess Lakshmi. The temple is known for its architectural beauty and intricate carvings. It is a significant religious and cultural landmark in the respective cities where it is situated. <br>
+                
+                Best Time to Visit: Birla Mandir can be visited throughout the year. However, it is recommended to visit during festivals and auspicious occasions for a more vibrant and spiritual experience. <br>
+                
+                Ideal Visit Duration: 1-2 hours <br>
+                
+                Entry Fee: Birla Mandir usually doesn't charge an entry fee, and visitors can enter the temple free of cost. <br>
+                
+                Places to Visit: Apart from the main sanctum of Lord Vishnu and Goddess Lakshmi, Birla Mandir complexes often include various other smaller temples dedicated to different deities. The temple premises are beautifully maintained and provide a serene environment for visitors. <br>
+                
+                Things to Do: Visitors can take part in the religious ceremonies and rituals conducted at the temple. Photography is allowed in most areas, but it's essential to respect the sanctity of the temple while clicking pictures. <br>
+        </div>
+        <div id="i3">
+            <center><h2>WEATHER</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;">
+            <div class="icon">
+            <h1><%=temp%>°C</h1><img src="/day/default.png" alt="" srcset="" id="image">
+            </div>
+            <h1 class="climate"><%=climate%></h1>
+                <h2>Humidity : <%=humidity%>%<br><br>Wind Speed : <%=windspeed%>kmph</h2>
+        </div>
+        <div id="i4">
+            <center><h2>TRANSPORTATION</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;"><br>
+            <p> <img src="https://img.icons8.com/?size=1x&id=oOAYqE64W2MO&format=png" height="25px" width="25px" alt="">&nbsp;&nbsp;By Air- Depending on the city, there might be an airport nearby. Visitors can take a taxi. <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=d8MqKVWJkyqN&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp; By Train- The temple is usually located within or close to the city, and there will be railway stations nearby.  <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=f42OOoV1ACzO&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp;By Road-  Birla Mandir is well connected by roads within the city. Visitors can use taxis, auto-rickshaws, or public buses to reach the temple.</p>
+        </div>
+    </form>
+    <script>
+        
+        let image=document.getElementById("image");
+
+        let climate=document.querySelector(".climate").textContent;
+        if(climate=="Mist"){
+            image.src="/day/Mist.png"
+        }
+        if(climate=="Patchy rain possible"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate rain"){
+            image.src="/day/Moderate.png"
+        }
+        if(climate=="Light rain shower"){
+            image.src="/day/patchy.png"
+        }
+        if(climate=="Partly cloudy"){
+            image.src="/day/default.png"
+        }
+        if(climate=="Cloudy"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Overcast"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Sunny"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Clear"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Thundery outbreaks possible"){
+            image.src="/day/Thunderstorm.png"
+        }
+        if(climate=="Fog"){
+            image.src="/day/Fog.png"
+        }
+        if(climate=="Light rain"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate or heavy rain shower"){
+            image.src="/day/Heavy.png"
+        }
+        if(climate=="Light drizzle"){
+            image.src="/day/Drizzle.png"
+        }
+    
+</script>
+</body>
+</html>
+

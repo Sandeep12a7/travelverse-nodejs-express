@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        background-image: url('');
+        background-size: cover;
+        background-color: lightskyblue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       }
+#p1{
+    position: absolute;
+    left: 50px;
+    top:-50px;
+    font-size: 60px;
+    font-style: italic;
+   }
+   #apimg{
+    height:200px;
+    width: 380px;
+    position: absolute;
+    top: 38px;
+    left:35px;
+    bottom:120px;
+   }
+   #i1{
+    background-color: beige;
+    height: 280px;
+    width: 450px;
+    position: absolute;
+    left:500px;
+    bottom:180px;
+    margin: 60px;
+    border-radius: 20px;
+   }
+   #i2{
+    background-color: beige;
+    height: 340px;
+    width: 950px;
+    padding: 40px;
+    position: absolute;
+    left:200px;
+    bottom:-260px;
+    border-radius: 30px;
+    margin: 50px;
+   }
+   body{
+    height: 1500px;
+   }
+   #i3{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:240px;
+    border-radius: 30px;
+   }
+   #i4{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:800px;
+    border-radius: 30px;
+   }
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 137%;
+    overflow: fixed;
+
+    
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    </style>
+</head>
+<body>
+    <form action="/kodaikanal" method="get">
+    <div id="nav">
+        <form action="/search" method="get">
+          <p id="p1">Kodaikanal</p>
+         </form>
+         <hr style="border-color:black;position:relative;top: 70px;">
+         <div id="i1">
+            <img id="apimg" src="https://assets.telegraphindia.com/telegraph/2022/Aug/1660899518_kodai-lake-1.jpg">
+        </div>
+        <br><br><br><br><br>
+        <div id="i2">
+            <h2><strong><center>INFORMATION</center></strong></h2>
+            <hr style="width: 950px;height: 1.5px;background-color: black;"><br>
+            <p>
+                Kodaikanal is comparatively less commercialised than many other cities in Tamil Nadu. <br> It has a lot of scenic natural attractions to offer to its tourists. Situated 7000 feet above in the southern tip of the upper Palani hills, Kodaikanal is a famous tourist place in Tamil Nadu for newlyweds.<br>
+
+Ideal Time to Visit: October to June <br>
+Ideal Vacation Duration:  2-3 days  <br>
+Average expense: Starting from ₹30,000 (4 days/ 3 nights)  <br>
+Places to Visit: Coaker’s Walk, Silver Cascade Falls, Kodaikanal Lake, Bear Shola Falls, Kurinji Andavar Temple<br>
+Things to Do: Photography, Sightseeing, etc.</p>
+            
+        </div>
+        <div id="i3">
+            <center><h2>WEATHER</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;">
+            <div class="icon">
+            <h1><%=temp%>°C</h1><img src="/day/default.png" alt="" srcset="" id="image">
+            </div>
+            <h1 class="climate"><%=climate%></h1>
+                <h2>Humidity : <%=humidity%>%<br><br>Wind Speed : <%=windspeed%>kmph</h2>
+        </div>
+        <div id="i4">
+            <center><h2>TRANSPORTATION</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;"><br>
+            <p> <img src="https://img.icons8.com/?size=1x&id=oOAYqE64W2MO&format=png" height="25px" width="25px" alt="">&nbsp;&nbsp;By Air-Madurai Airport (128 km)  <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=d8MqKVWJkyqN&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp; By Train-  Kodai Road Station (79 km), Palani Railway Station (66 km)   <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=f42OOoV1ACzO&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp;By Road- Kodaikanal Bus Station (<1 km) </p>
+        </div>
+    </form>
+    <script>
+        
+        let image=document.getElementById("image");
+
+        let climate=document.querySelector(".climate").textContent;
+        if(climate=="Mist"){
+            image.src="/day/Mist.png"
+        }
+        if(climate=="Patchy rain possible"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate rain"){
+            image.src="/day/Moderate.png"
+        }
+        if(climate=="Light rain shower"){
+            image.src="/day/patchy.png"
+        }
+        if(climate=="Partly cloudy"){
+            image.src="/day/default.png"
+        }
+        if(climate=="Cloudy"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Overcast"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Sunny"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Clear"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Thundery outbreaks possible"){
+            image.src="/day/Thunderstorm.png"
+        }
+        if(climate=="Fog"){
+            image.src="/day/Fog.png"
+        }
+        if(climate=="Light rain"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate or heavy rain shower"){
+            image.src="/day/Heavy.png"
+        }
+        if(climate=="Light drizzle"){
+            image.src="/day/Drizzle.png"
+        }
+    
+</script>
+</body>
+</html>

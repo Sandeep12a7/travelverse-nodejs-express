@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        background-image: url('');
+        background-size: cover;
+        background-color: lightskyblue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       }
+#p1{
+    position: absolute;
+    left: 50px;
+    top:-50px;
+    font-size: 60px;
+    font-style: italic;
+   }
+   #apimg{
+    height:200px;
+    width: 380px;
+    position: absolute;
+    top: 38px;
+    left:35px;
+    bottom:120px;
+   }
+   #i1{
+    background-color: beige;
+    height: 280px;
+    width: 450px;
+    position: absolute;
+    left:500px;
+    bottom:180px;
+    margin: 60px;
+    border-radius: 20px;
+   }
+   #i2{
+    background-color: beige;
+    height: 340px;
+    width: 950px;
+    padding: 40px;
+    position: absolute;
+    left:200px;
+    bottom:-260px;
+    border-radius: 30px;
+    margin: 50px;
+   }
+   body{
+    height: 1500px;
+   }
+   #i3{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:240px;
+    border-radius: 30px;
+   }
+   #i4{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:800px;
+    border-radius: 30px;
+   }
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 137%;
+    overflow: fixed;
+
+    
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+    </style>
+</head>
+<body>
+    <form action="/vanjangi" method="get">
+    <p id="p1">Vanjangi</p>
+         <hr style="border-color:black;position:relative;top: 70px;">
+         <div id="i1">
+            <img id="apimg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUSERISEhUSEhIYERISERIRGBESERIRGBQZGRgUGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QGhISHjEhISE0NDQ0NDQxNDQ0MTExNDQ0NDExNDQ0MTQxNDQ0NDQxNDQ0NDQ0Pz8/NDQ0NDQ/NDExMf/AABEIAMIBAwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAECBAUGB//EAD0QAAIBAgMGAwUGBQIHAAAAAAECAAMRBCExBRJBUWFxIoGRBhMyobFCUmLB4fAUFXKS0TOyI1NjgqLC8f/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACIRAQEAAgICAgMBAQAAAAAAAAABAhEDEgQTMUEUIWEiUf/aAAwDAQACEQMRAD8Ax6NGWVSFp08oQJLtNACnJCnLCpCLTmQBKUItKWEpw6U4VWWjCLSlpaUKlKBVWjJihLi0oQU4FIUIQUJcWlCLTm4ikKAkhQl4UpMUpWVFaMf3MvilJe7hGd7qL3M0fdRe6gZxoyPuZomlGNGBmtQgzRmoaUg1KZrUZjUJA0ZpmlIGlMtMxqMgaM02pwbUpldsxqUE9Oab0oF6UNM004xpy+1ODZJKKJSNuS4ySJSTYp+6jS3uRRs0gqSYSTRIVUnTbGkESGRJNKcsJThQkpSwlKFVJYVJNmgFpwq04dEhVpyistOFWlLC04RUk2mlcUpNaUshJNac1tLFcU44pyyEjhJraaVxTj7ktBI/u42mlTci3Jb93G3I2aVCkY05b3ZEpJtZiqGnIGnLpSRNOZ2sii1ORanLrJIFJLWtKDU5BqcvlJBqci6Z7U4J6c0WpwT04VmvTgmpzSZIBqclqaZzJIlJddIJkmVVNyKH3IpANVh0SOlOWEpx2XRkSWESSSnLCU5eyaDRIdEk0SGRJdiCJCKkmqQqpLsDVIVUk1SEVI2BhJMJCKkmqSoGEiCQ4SPuy7NA7kfchgsfcjZoDcje7lndjbkbNKxSMUlnciKRs0q7kiUlopIlJNioUkCktFJFkk2qoySDJLZSDZJnsKjJBskuMkEySXKLpTdJXdJfdIB0mbnF6qLpBMkuOkC6TN5IsxU9yKG3Ypn2xeqVNJZRIGnLCGeac7r6xkSHRIJDDoZucydE0WFVZBTCqZucydElWEVZFYZZucjNwMqQipGWEEvdOpwskBGEkJqZp1OFkgsQkhNTJnRBZILEJITUSm3Y27JyEoiVkd2TMYmZuS6DKyJEmTIEzFzamKJWQIkyZBjMXNqYhkQbCEYwbGc7yRqYBsINpNjBM055c0bnGGwgXhXeAd5xy52pxhuJXcQrvAu853nbnGHGkN+KY96+sqbywjzGp4oc5ZTFCeaclejo1keHR5kpihDpihNTkqetqo8MjzJXFCFXFCanLknqaqvCLUmSMUOcmMUOc3Oexm8NawqSQqTJGJ6yQxU6TyGLwVsCpJCpMgYqOMVNzyWLwVsCpJLUmOMVJLi51x8mM3grbVoVZjU8aJfoYoHjPRhz437cM+LLH6XLQTmJ66gaiZ+Ixom+Tmxxv6u2cOPLK/C09SDNWZj428E2K6zy5+TPp6seCtU1pFq0yji+sG2L6zjefKtzx61TWg2rTKbGDnBNjRzmLy51ucDXasINq0x2x45wLbQHOYtzrc4pGy1aBevMV9ojnK77RHOZuOdb64xuPiBAPiRMJ9oys+0o9OdP8xuviZXfFTBfaMrVNoy/j51Lli3f4uKcz/MOsUn4uSd8QBtgLq3pnDptkfeHnlPO0YjS/qRDKN7X1NzPsfh4PDPKyeiptj8Qhk2x+ITz2mhGjW7XEs06jDLebva8n4eDc8nJ6Cm0jzhl2ieYnB0H3T8dQdgLfWaVPaKAeIk9bWv85jLxMfpueRt1y7RPOFXaPWcY23EHwpUf0UStV25VbJEVOpu7eWgmfxP41+TJ9vQFx/WEXHHnPM2xmJY5u47HdHoJdwuKxC61D2I959YvhxrHyd/T0Jcd1MIMb1nH4XaTD/UYN2TdP1mhS2kh1P1H5znfG19OuPNK6RcYecIuL7zCTGoRcEwgxqdZi8H8bmcby4qGTE20M51NopyMmu0lJsA3obesx6rF3jXRHGHnAPiRzmV/F5fCfISpWx757qHubn5R69n+Z8NtsVBPipzGIxdduLKPwAD56x8Ni6y5NvMObAEjznWcLF5J/wAdA2J6wbV+szxinPD5CRbEP9y/cgSziid11q/WCat1lJsQ33B6yLVzyE3OOM3NZet1gXq9ZXNU9JBqnWamDFzGepAO8g1Qc4F3EswYuZO8Ezx2YQbETcxTsi7Su7QzQDiXqxaFvRRrRS9YywKWCc/Yc/8Aa0u4fZrk5pUA57s7ZKfQekL7uejs4TGOYo7GFs9/0tDDZKfj+U3rga3HeKwPEeV5NrqOfqbLa1kXP7zkH8o1LZFXiyjsSfynRimeFpL3Z6Rur1jFTZrjV8v6ReWEwHVj2AH5S/fmSO97RwAdCfmBJtqSRTGz1+7fve8mmz1+6PMy0gB/S8fd7yNzSuNnD7q+d4zbNB0IXsB+cuKvEAntn+cffHFQD+Le/KTTe4pps2xvvm/TKWBheTnzF5aSoOSjzkwRz9M5m4tSxROFb7w+cc0GUXvf1l1WB4k9hHK9PUMPnMXBuZMOptJ1ytbobyP8+IHwkngL5TQxeARzdyByuSBMmphKRYoFq/1hWKX6GOmJc8h09oRbxKQehBh02ujaEdjkZh4nCohI3nJH/Tcj1EoV2CcD3IZfrL64xeTJ1bY0QLYu/GcsuPPMjzuJM4snjLMIz7XQNipA4rvMEYojjCLjuYmujPds/wAUOsicUOczRigYvegy9Eua82KHODOIlbejEy9Ym1g1ozPK94rxqJsRnMGzyDOIF3k0Wi+8ilTfijSdl1fbdwf9CnbiAz39f0mlgvbSi+Vam9L8S2qL52APyM4SkbwoSdrI4TKvTqG2cI4umIpjPRxuNpyaxl8shUMLsLahbgzyPcEJhsQ9I3pvUQ8dxmS/e2szpuZPVgy8A/8AbBswGYDntu/4nG7O9sK9PKpaqtxmQFcDuMj5iaGI9tl+xQLdXYJ6WBk01t0qOjfZseG9HdPwA+d/kJx7e17nSgg5+Mk2/tlin7UKdaVUH8LowHqBGjboWcjSm3/mIxq5eJGHUb8xaXtYoYh1qKptutv078b3BNuXHnNfDbUWoAafjyByZL+djI1E95W03l9ZNX4b/rmfnJLjCfs3118Xzh6eI3tUHmM4aBsfvA992II3Bx2EhtPa1HCrvVd1LjwqoBqP/Sv55DrOOx/t1UYkUKaU14F/G3e2QHzmpjamWcxdqSeLjsQYVXUG5z6cDPNB7ZYy9zURh91qdG3+2/zmxs/27yC4iiD+OjZT/Ycvn5RcamPNHZ1apJO6thfIW3rDleQz1I/9ZgH26wwIASuRlc7qC3P7VzaXsN7SYNyT79R+Fw6f7hYzPRr2S/bRdP2d0iDelz3D++F7w9EJUXfplaiHihDL6iRago+yPMtc+sdV7MjGbOD6jd6gU2mRV9nnUndu99Mwtues6w4YcFcdjl85UqUyL2DG3A2kT5c4+wGAFwb8Tv09O1vzlevgEpjxVc+QS/zvNt3r7wI92qgi6tvlivEX4SGOxCVEKlFVyLHfANu0mzUck+KVSRe+eog22hb4fUwe0MLuMbXt1/ecz7zrI45Wxdq4pm+JjbloPSMuMcaMfrKRMbel0z2XWxrn7R8rCJNoOD8V+hlMPFvCNHZprtQcVPlnJjHqeNu9xMcxR1h3rX9+vP6R5jWijqd6nTqbt7a215Qv8VkMs+cqxTWoxsZ6xN8gL2vbmOMPhq1yAbd8rwVGkGR2LKpWxAY2La5KOJ/xK8mtkum0lMHQg9oxZALll1I63EyqdUqbg2MiTeTq13X6mPAyRfNv8SrVxTtqxtyGQ+UBFLJIlytKKK0UrK5gto1aJvSqOmd7KTuk9V0PmJtr7b4sKBvU/h3d7cXev97lfyt0nMRQstizisU9VzUqOzuTmzEkn9Okrxo4MGzRxJAA/rGtIprx4xjQbESoV+FmXnYkfSdXsb2vqK6riSKlMBrtZRUuFJWxyBzAGfPWchHMEtnw9qostVVdHUowurKQwOfTlp5Qn8KD8Tsf6RYzyrYvtDWwpUKS9IEk0mPgN9SDwPad/s7blPEqPdOA5GdNyFcHiAPtdxeZ6us5NtR8FTOu/fncf4gquAW3h8XRwDAFqgJABMA+KcHMEdwY6Ndg8VgqYHjRRaYG06FNxbcA1sSLHyM6hMZfJ1uOVr/KGTFBjcgBQLAG1wJmyw3K8sxGz2U+Ebw+cpvTIOYInrFTBYZ7ncRSc7r4c+cpYnY1E5hcvw2lmVjNwleY2jEWnfHY1K/iSoB04ddISnsakM0Y9mAIt3EvZnq88vFeeiVNh0SwYizDQrp5iBxGxaLG7KCfw+E/KXsz1rgbxTt/5PQ/5Zijsda4cQm7pmM++Xf9IOKaYTtbUeWeYjKL5DXhHU5i2eYsNZKr2se1gRbW0KgUk0pEmwtfhcgD1MZW1ve9sogbnxcePXnAiVIvIiFTU52yJ42yB/fnEzXGguf3lAFeEQA3vy1HCTYAqLDMXLEX+HIC/Ad+sktYBd2w1PfO3yykpAdw8JIUjpof3rHCjMg/4tHDg63vYAcsoXUQ92dPSQtDrvObADIcAqgDqcvnBBv/AJCfpEQivz0jhhaxzzkWtw5D1tnCxJkBzHpygiI+kJ7y+vrB+gYoRl5SBEIa8e8aKVHQ7N9rMRRAViKqC+VS5Ydm19bzqNm+1VCqB7xhSe9t177h6h9Ld7TzaKTTUy09jCKc7i2twRYxx7lsiDf0nkuEx1Skb03ZegOR7g5GdDsv2mzK4gDO266gi3O4/OTTUydtV2ch+ByDwzGsoVkqUgN7MHz+kiuPpNu2q0xyN8j56Q383pHwGpTds/gYXFuYkaVBjnByuOhtHTEnVhe/lLVLF0wbq9M72gJW5PIR2qrqUU9hl6SbFZqu9+H5yrUZh+ktlVJ8It9IRnAFiAY2yyfevGmlvJ90xR2HmMkFvpIxGdHNaSlkDkDnY+PMjkQLXvAklm8Rz5mWMDXdSVRxT3rBiSFHrbLWO1IKblmItk6WNnvlfPLTvJv9tSfpWU2JvmM4iwJyFvnC4olmuzKxIuWWwv3yGfO+criEFUgHIm4YFWXK1uPO+keojL4uBsQwz168D0gLwjAjXiARYjyvKHUZE3tmLjQkZ6enzkQhIvw09IkcqbjI8DIgwidiDa+eYyN+lgRrECM8s8rHPLPW3aRBscoi3QaQHF/K+ds4iL3tcgdOHM8o4YkWA0zuB4rWtryh6uIuTugIGRVYLYA2tcjkCVBtzgVgCesIllvcXyI1Is1sj5GQS18/31l7D4dHWoxZk3VG6uTEtxucssj+xIsVKr30AAso4XJAsTfveD3cr9dOMYiGp4csPCQTe26D4u9uUqBg9YicpKpRK3DeFgbFTreChdnaK0YGImEK0UmxuL+UhaAopNFubZ8dM+F5AiArxwY0UCV5apY+omSu1ssiSQLaZGU4pNLtqrtysOK97Z/WQbbdc/bt2AmbFGobq9/Nq332ilGKNQ3SikmFiR14yMqFCJUK6eYOh7wcUBExRRQFFeKKAojFFAkq35DI/IXiuP3zjKIhygISzhMOahKgEmxII0AGZJFiWy4DOVwPLK/eEoNunevYjMdc9On6QBsJNHsDbI/WDMMUO6GuDqAARcWtqNRrke/KAAxXhd0bosTfituHAjnIwIRS2xBHhVQQCTa5uLa5nh0EA1Ox8r8/pChxQgXK/IgHTjpl5SHGENJDh9YWspJNx9kN4V3RukCxtYZZjPrAsYBaDbrK2eRBuLcD1yj4hrsTnnoDqFGSj0tGYiwte+e8DYjoRy7dOtgEmAo940UBRExRQFEDFHtAaKK0UAuJ+Nu8FFFE+FvyUUUUIUUUUBRRRQFFFFAUmmh7j848UBm/z9ZCKKA/CONIooEqfH+kx3+Fe35xooFmh/pMeNyL8bbpyj1cilsv+GPoYopFAT427N9JA/EO8UUqEdfKDMUUBSQ0P75xRQIxRRQFFFFAUUUUBRRRQP/Z">
+        </div>
+        <br><br><br><br><br>
+        <div id="i2">
+            <h2><strong><center>INFORMATION</center></strong></h2>
+            <hr style="width: 950px;height: 1.5px;background-color: black;"><br>
+            <p>Vanajangi, also known as Vanjangi, is a beautiful and lesser-known destination located near Vishakhapatnam (Vizag) on the southeast coast of the Indian peninsula. It offers a serene and scenic environment, making it an excellent offbeat spot for nature lovers and travelers seeking tranquility. <br>
+
+                Best Time to Visit: October - March <br>
+                
+                Ideal Vacation Duration: 1 - 2 days <br>
+                
+                Places to Visit: Vanajangi is known for its natural beauty and pristine surroundings. Visitors can explore the lush greenery, rolling hills, and picturesque landscapes. <br>
+                
+                Things to Do: <br>
+                1. Nature Walks: Enjoy leisurely walks amidst the natural beauty of Vanajangi. The area is abundant in flora and fauna, providing a peaceful retreat for visitors. <br>
+                2. Birdwatching: Bird enthusiasts can indulge in birdwatching as Vanajangi is home to various bird species, making it a haven for birdwatchers. <br>
+                3. Photography: Capture the scenic beauty and captivating landscapes of Vanajangi through photography. <br>
+                4. Relaxation: Unwind and relax in the tranquil environment, away from the hustle and bustle of city life. <br>
+
+
+                 </p>
+            
+        </div>
+        <div id="i3">
+            <center><h2>WEATHER</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;">
+            <div class="icon">
+            <h1><%=temp%>°C</h1><img src="/day/default.png" alt="" srcset="" id="image">
+            </div>
+            <h1 class="climate"><%=climate%></h1>
+                <h2>Humidity : <%=humidity%>%<br><br>Wind Speed : <%=windspeed%>kmph</h2>
+        </div>
+        <div id="i4">
+            <center><h2>TRANSPORTATION</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;"><br>
+            <p> <img src="https://img.icons8.com/?size=1x&id=oOAYqE64W2MO&format=png" height="25px" width="25px" alt="">&nbsp;&nbsp;By Air: The nearest airport is Vishakhapatnam Airport, which connects to major cities within and outside India.
+
+                
+                
+                <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=d8MqKVWJkyqN&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp; By Train: Vishakhapatnam Junction is the nearest railway station, providing connectivity to all important cities. <br><br>
+                <img src="https://img.icons8.com/?size=1x&id=f42OOoV1ACzO&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp; By Road: Vanajangi is accessible via well-maintained roads that connect Vishakhapatnam.</p>
+        </div>
+    </form>
+    <script>
+        
+        let image=document.getElementById("image");
+
+        let climate=document.querySelector(".climate").textContent;
+        if(climate=="Mist"){
+            image.src="/day/Mist.png"
+        }
+        if(climate=="Patchy rain possible"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate rain"){
+            image.src="/day/Moderate.png"
+        }
+        if(climate=="Light rain shower"){
+            image.src="/day/patchy.png"
+        }
+        if(climate=="Partly cloudy"){
+            image.src="/day/default.png"
+        }
+        if(climate=="Cloudy"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Overcast"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Sunny"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Clear"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Thundery outbreaks possible"){
+            image.src="/day/Thunderstorm.png"
+        }
+        if(climate=="Fog"){
+            image.src="/day/Fog.png"
+        }
+        if(climate=="Light rain"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate or heavy rain shower"){
+            image.src="/day/Heavy.png"
+        }
+        if(climate=="Light drizzle"){
+            image.src="/day/Drizzle.png"
+        }
+    
+</script>
+</body>
+</html>

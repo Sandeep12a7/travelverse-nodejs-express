@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        background-image: url('');
+        background-size: cover;
+        background-color: lightskyblue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       }
+#p1{
+    position: absolute;
+    left: 50px;
+    top:-50px;
+    font-size: 60px;
+    font-style: italic;
+   }
+   #apimg{
+    height:200px;
+    width: 380px;
+    position: absolute;
+    top: 38px;
+    left:35px;
+    bottom:120px;
+   }
+   #i1{
+    background-color: beige;
+    height: 280px;
+    width: 450px;
+    position: absolute;
+    left:500px;
+    bottom:180px;
+    margin: 60px;
+    border-radius: 20px;
+   }
+   #i2{
+    background-color: beige;
+    height: 340px;
+    width: 950px;
+    padding: 40px;
+    position: absolute;
+    left:200px;
+    bottom:-260px;
+    border-radius: 30px;
+    margin: 50px;
+   }
+   body{
+    height: 1500px;
+   }
+   #i3{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:240px;
+    border-radius: 30px;
+   }
+   #i4{
+    background-color: beige;
+    height: 330px;
+    width: 380px;
+    padding: 40px;
+    position: absolute;
+    top: 1000px;
+    left:800px;
+    border-radius: 30px;
+   }
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 137%;
+    overflow: fixed;
+
+    
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    </style>
+</head>
+<body>
+    <form action="/munnar" method="get">
+    <div id="nav">
+          <p id="p1">Munnar</p>
+         <hr style="border-color:black;position:relative;top: 70px;">
+         <div id="i1">
+            <img id="apimg" src="https://i0.wp.com/oneday.travel/wp-content/uploads/one-day-munnar-local-sightseeing-tour-package-with-top-station-by-private-car-header.jpg?resize=1080%2C720&ssl=1">
+        </div>
+        <br><br><br><br><br>
+        <div id="i2">
+            <h2><strong><center>INFORMATION</center></strong></h2>
+            <hr style="width: 950px;height: 1.5px;background-color: black;"><br>
+            <p>With roads amidst lust tea gardens on both sides, Munnar is a famous place in Kerala you should visit. The picturesque scenery with lofty clouds, beautiful mountains and rolling hills make it a memorable vacation. <br>
+
+                Take in the beauty of the lush green hills amidst the clouds while sipping your hot masala chai. However, if you are feeling adventurous, you can try trekking, camping and boating activities. <br>
+                
+                Best time to visit Munnar: November to February <br>
+                Ideal Vacation Duration: 3-4 days <br>
+                Average Expense: ₹ 1,959 per person per day <br>
+                Places to Visit in Munnar: Chokramudi Peak, Mattupetty Dam, Eravikulam National Park, Echo Point, Pothamedu Viewpoint <br>
+                Things to Do in Munnar: Explore Keralian cuisine, visit tea estates, view Munnar hills from viewpoints, and photograph animals in their natural habitat. <br>
+                </p>
+            
+        </div>
+        <div id="i3">
+            <center><h2>WEATHER</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;">
+            <div class="icon">
+            <h1><%=temp%>°C</h1><img src="/day/default.png" alt="" srcset="" id="image">
+            </div>
+            <h1 class="climate"><%=climate%></h1>
+                <h2>Humidity : <%=humidity%>%<br><br>Wind Speed : <%=windspeed%>kmph</h2>
+        </div>
+        <div id="i4">
+            <center><h2>TRANSPORTATION</h2></center><br>
+            <hr style="width: 360px;height: 1.5px;background-color: black;"><br>
+            <p> <img src="https://img.icons8.com/?size=1x&id=oOAYqE64W2MO&format=png" height="25px" width="25px" alt="">&nbsp;&nbsp;By Air-The nearest airport is Cochin International Airport.<br><br>
+                <img src="https://img.icons8.com/?size=1x&id=d8MqKVWJkyqN&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp; By Train-Eranakulam Junction (Kochi) is the nearest railway station to Munnar.<br><br>
+                <img src="https://img.icons8.com/?size=1x&id=f42OOoV1ACzO&format=png" alt="" height="25px" width="25px">&nbsp;&nbsp;By Road-Rent a cab from Kochi to Munnar. You can also book your seat on state-run buses from various towns of Kerala and Tamil Nadu.</p>
+        </div>
+    </form>
+    <script>
+        
+        let image=document.getElementById("image");
+
+        let climate=document.querySelector(".climate").textContent;
+        if(climate=="Mist"){
+            image.src="/day/Mist.png"
+        }
+        if(climate=="Patchy rain possible"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate rain"){
+            image.src="/day/Moderate.png"
+        }
+        if(climate=="Light rain shower"){
+            image.src="/day/patchy.png"
+        }
+        if(climate=="Partly cloudy"){
+            image.src="/day/default.png"
+        }
+        if(climate=="Cloudy"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Overcast"){
+            image.src="/day/Cloudy.png"
+        }
+        if(climate=="Sunny"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Clear"){
+            image.src="/day/Sunny.png"
+        }
+        if(climate=="Thundery outbreaks possible"){
+            image.src="/day/Thunderstorm.png"
+        }
+        if(climate=="Fog"){
+            image.src="/day/Fog.png"
+        }
+        if(climate=="Light rain"){
+            image.src="/day/Patchy.png"
+        }
+        if(climate=="Moderate or heavy rain shower"){
+            image.src="/day/Heavy.png"
+        }
+        if(climate=="Light drizzle"){
+            image.src="/day/Drizzle.png"
+        }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        /* Reset some default styles for the video background and the content */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 117%;
+    overflow: fixed;
+
+    
+}
+
+/* Apply styles to the video background container */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow:fixed;
+}
+
+/* Style the video element */
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: fill;
+}
+
+/* Style the content that goes over the video */
+.video-background .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; /* Change this to the desired text color */
+    text-align: center;
+    z-index: 1; /* Make sure the content is above the video */
+}
+
+
+#p1{
+    position: absolute;
+    left: 50px;
+    top:-65px;
+    font-size: 60px;
+    font-style: italic;
+   }
+   #line{
+    position: relative;
+    top: 80px;
+    color: black;
+    background-color: black;
+    
+   }
+   #ap{
+    background-color: beige;
+    height: 295px;
+    width: 420px;
+    position: absolute;
+    left:50px;
+    bottom:330px;
+    border-radius: 30px;
+   }
+   #ka{
+    background-color: beige;
+    height: 295px;
+    width: 420px;
+    position: absolute;
+    left:540px;
+    bottom:330px;
+    border-radius: 30px;
+   }
+   #kl{
+    background-color:beige;
+    height: 295px;
+    width: 420px;
+    position: absolute;
+    left:1030px;
+    bottom:330px;
+    border-radius: 30px;
+   }
+   #tn{
+    background-color: beige;
+    height: 295px;
+    width: 420px;
+    position: absolute;
+    left:300px;
+    bottom:10px;
+    border-radius: 30px;
+   }
+   #ts{
+    background-color: beige;
+    height: 295px;
+    width: 420px;
+    position: absolute;
+    left:850px;
+    bottom:10px;
+    border-radius: 30px;
+   }
+   #pd1{
+    
+    height: 1350px;
+    position: absolute;
+    left:900px;
+    bottom:-150px;
+   }
+   #apimg{
+    height:180px;
+    width: 350px;
+    position: absolute;
+    left:35px;
+    bottom:90px;
+   }
+   #apb,#klb,#tnb,#tsb,#kab{
+    position: absolute;
+    left:145px;
+    bottom:20px;
+    height: 50px;
+    width: 160px;
+    font-size:18px;
+    border-radius:15px;
+    font-style: italic;
+    transition: background-color 0.3s ease;
+   }    
+   #apb:hover {
+  background-color: #007BFF;
+}
+#p2{
+    position: absolute;
+    left: 360px;
+    top:-10px;
+    font-size: 30px;
+    font-style: italic;
+}
+#apb:hover,
+#klb:hover,
+#tnb:hover,
+#tsb:hover,
+#kab:hover {
+  background-color: #66cccc; 
+  color: #ffffff;
+}
+#ap:hover,
+#kl:hover,
+#tn:hover,
+#ts:hover,
+#ka:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05); 
+}
+
+
+#btn {
+  position: absolute;
+  left: 1400px;
+  top: 20px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+  color: black;
+  display: flex;
+  align-items: center;
+  
+}
+span{
+    margin-left: 3px;
+}
+
+
+#btn:hover{
+    background-color: #66cccc; 
+    color: #ffffff;
+
+}
+</style>
+    <title>South States</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://player.vimeo.com/external/449630779.sd.mp4?s=797435466654b9b478427eb524edba20eb4ad0fb&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+        </video>
+    </div>
+    <div id="nav">
+           
+            <p id="p1">Travel Verse </p>
+            <p id="p2"> : Explore the South of India</p>
+                <a href="/login"><button type="button" id="btn">Log Out<span class="material-symbols-outlined">
+                    logout
+                    </span></button></a>
+           
+    </div>
+    <hr style="border-color:black;position:relative;top: -910px;">
+<div id="ap">
+    <img id="apimg" src="https://vgocart.com/wp-content/uploads/2023/04/tirupati-balaji-temple-andhra-pradesh-coimbatore--1024x576.png">
+    <a href="/andhra"><button id="apb">Andhra Pradesh</button></a>
+</div>
+<div id="ka">
+    <img id="apimg" src="https://karnatakatourism.org/wp-content/uploads/2020/05/Hampi.jpg">
+    <a href="/karnataka"><button id="kab">Karnataka</button></a>
+</div>
+<div id="kl">
+    <img id="apimg" src="https://webunwto.s3.eu-west-1.amazonaws.com/2019-10/Kerala.jpg">
+    <a href="/kerala"><button id="klb">Kerala</button></a>
+</div>
+<div id="tn">
+    <img id="apimg" src="https://img.veenaworld.com/wp-content/uploads/2021/02/15-Famous-Temples-in-Tamil-Nadu-scaled.jpg">
+    <a href="/tamilnadu"><button id="tnb">Tamil Nadu</button></a>
+</div>
+<div id="ts">
+    <img id="apimg" src="https://tourismnewslive.com/wp-content/uploads/2018/05/tel1.jpg">
+    <a href="/telangana"><button id="tsb">Telangana</button></a>
+</div>
+
+
+    
+
+
+</body>
+</html>

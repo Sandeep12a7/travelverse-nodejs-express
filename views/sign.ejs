@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+  body{
+    background-image: url("https://images.unsplash.com/photo-1541173061692-bbec3dc2bf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c291dGglMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+fieldset{
+    position: relative;
+    left: 500px;
+    height: 450px;
+    width: 350px;
+    border-radius: 20px;
+    position: relative;
+    left: 250px;
+    top: 200px;
+   }
+   .s1{
+    background-color: rgb(96, 240, 96);
+    border-radius: 25px;
+    height: 30px;
+    width: 130px;
+    cursor: pointer;
+    }
+    hr{
+     height: 1px;
+     background-color: black;
+    }
+    h1{
+        font-family: 'Dosis', sans-serif;
+    }
+    #c,#d{
+        height: 20px;
+        width: 200px;
+        border-radius: 10px;
+        
+       }
+       .d1{
+        position: relative;
+        
+        height: 450px;
+        width: 400px;
+       }
+       #e{
+        background-color: rgb(89, 236, 89);
+       }
+       #p1{
+    position: absolute;
+    left: 55px;
+    top:-160px;
+    font-size: 60px;
+    font-style: italic;
+   }
+    #log,label,strong{
+        font-family: 'Dosis', sans-serif;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .space{
+        height: 20px;
+    }
+    strong{
+        font-size: large;
+    }
+
+    </style>
+</head>
+<body>
+      <form action="/signup" method="post">
+        <fieldset>
+        <div class="d1">
+            <p id="p1">Travel Verse </p>
+            <center><h1 id="log">Sign Up</h1></center><hr>
+            <div class="d2">
+                <p class="space"><%=Response%></p>
+
+        <label for="c"> <strong> Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="email" id="c" name="email" required><br><br><br>
+        <label for="d"> <strong>Password </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+        <input type="password" id="d" name="password" required><br><br><br>
+        <label for="d"> <strong>Confirm-Password </strong> &nbsp;&nbsp;&nbsp;&nbsp;   : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+        <input type="password" id="d" name="re_password" required><br><br><br><br><br>
+    
+                        
+    <center><button onclick="onSubmit()" type="submit" class="s1">Create  Account</button></center>
+    </div>
+    </div>
+    </fieldset>
+</form>
+</body>             
+</html>
+         
