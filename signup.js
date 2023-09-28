@@ -15,29 +15,60 @@ app.set('view engine', 'ejs');
 const axios = require('axios');
 const { messaging } = require('firebase-admin');
 app.use(express.static("public"));
-
+var passwordHash = require('password-hash');
 app.get('/signup', function (req, res) {  
     res.render(__dirname+'/views/'+'sign.ejs',{Response:""})  
     }) ;
-app.post('/signup', function (req, res) {  
+app.post('/login', function (req, res) {  
+        db.collection('data').where('Email','==',req.body.email)
+        .get()
+        .then((docs)=>{
+                if(docs.size>0){
+                        res.render(__dirname+'/views/'+'sign.ejs',{Response:"Email Already Existed!!!"})
+                }
+                else{
+                if(req.body.password!==req.body.re_password){
+                        res.render(__dirname+'/views/'+'sign.ejs',{Response:"Password not matched!!!"})
+                }
+                else{
+                        db.collection('data').add({
+                                Email:req.body.email,
+                                Password: passwordHash.generate(req.body.password),
+                                
+                                
+                        
+                            })
+                        res.render(__dirname+'/views/'+'login.ejs',{Response:"Successfully Registered!!!"});
 
-        if(req.body.password!==req.body.re_password){
-                res.render(__dirname+'/views/'+'sign.ejs',{Response:"Password not matched!!!"})
+                }
         }
-        else{
-                db.collection('data').add({
-                        Email:req.body.email,
-                        Password:req.body.password,
-                        RE_password:req.body.re_password
-                
-                    })
-                res.render("states");
-        }
-    
+})
     });
-app.get('/andhra', function (req, res) {  
-        res.render(__dirname+'/andhra.ejs')  
+
+    app.get('/login', function (req, res) {  
+        res.render(__dirname+'/views/'+'login.ejs',{Response:""})  
         }); 
+    app.post('/states', function (req, res) {  
+        db.collection('data').where('Email','==',req.body.email).get().then((docs)=>{
+            let verified=false;
+            docs.forEach((doc)=>{
+                    verified=passwordHash.verify(req.body.password, doc.data().Password);
+            });
+            if(verified){
+                    res.render("states")
+            
+            
+            
+            }
+            else{
+                res.render(__dirname+'/views/'+'login.ejs',{Response:"Invalid credentials"})
+            }
+        }).catch((error) =>{
+            console.error(error)
+            res.redirect('/login')
+        })
+    });
+
   
               
                 
@@ -222,6 +253,9 @@ app.get('/wayanad', function (req, res) {
                   res.render("wayanad", {temp:response.data.current.temp_c, climate:response.data.current.condition.text,humidity:response.data.current.humidity,windspeed:response.data.current.wind_kph});
                 }); 
         }); 
+app.get('/andhra', function (req, res) {  
+        res.render(__dirname+'/andhra.ejs')  
+        }); 
 
 app.get('/tamilnadu', function (req, res) {  
         res.render(__dirname+'/tamilnadu.ejs')  
@@ -237,23 +271,6 @@ app.get('/kerala', function (req, res) {
         }); 
 
 
-app.get('/login', function (req, res) {  
-    res.render(__dirname+'/views/'+'login.ejs',{Response:""})  
-    }); 
-app.post('/states', function (req, res) {  
-    db.collection('data').where('Email','==',req.body.email).where('Password','==',req.body.password).get().then((docs)=>{
-        if(docs.size>0){
-                res.render("states")
 
-            
-        }
-        else{
-            res.render(__dirname+'/views/'+'login.ejs',{Response:"Invalid credentials"})
-        }
-    }).catch((error) =>{
-        console.error(error)
-        res.redirect('/login')
-    })
-});
 
 app.listen(3002);
